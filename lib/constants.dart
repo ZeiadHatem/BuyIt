@@ -1,0 +1,20 @@
+import 'package:flutter/material.dart';
+
+const kBackgroundColor1 = Color.fromRGBO(38, 66, 90, 5);
+const kProductCollection = 'Products';
+const kOrdersCollection = 'Orders';
+const kProductName = 'ProductName';
+const kProductPrice = 'ProductPrice';
+const kProductCount = 'ProductCount';
+const kProductDescription = 'ProductDescription';
+const kProductCategory = 'ProductCategory';
+const kProductImageLocation = 'ProductImageLocation';
+const kFamilyFont = 'PlayfairDisplay-Italic-VariableFont_wght.ttf';
+const kJackets = 'jackets';
+const kTrousers = 'trousers';
+const kTShirt = 'tshirt';
+const kShoes = 'shoes';
+const kOrdersDetails = 'OrderDetails';
+const kTotalPrice = "TotalPrice";
+const kAddress = 'Address';
+const kpreferenceValue  = 'RememberMe';

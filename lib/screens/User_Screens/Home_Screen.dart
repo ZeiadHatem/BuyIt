@@ -91,10 +91,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   ]),
             ),
             bottomNavigationBar: BottomNavigationBar(
+              //to show categories of products.
               currentIndex: bottomBarIndex,
               onTap: (value) async{
                 if(value==3){
-
+                  //to save all info of user in his phone and stay it login.
                   SharedPreferences prefs = await SharedPreferences.getInstance();
                   prefs.clear();
                   Auth auth = Auth();

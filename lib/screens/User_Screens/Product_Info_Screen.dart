@@ -33,6 +33,7 @@ class _ProductInfoState extends State<ProductInfo> {
           backgroundColor: kBackgroundColor1,
           body: SingleChildScrollView(
             child: Container(
+              //disgn the info product screen.
                 height: MediaQuery.of(context).size.height,
                 margin: EdgeInsets.only(bottom: 10),
                 child: Column(
@@ -110,12 +111,13 @@ class _ProductInfoState extends State<ProductInfo> {
                                 color: Colors.white,
                                 fontFamily: kFamilyFont),
                           ),
-                          IconButton(onPressed: (){}, icon: Icon(Icons.share_rounded,color: Colors.white,))
+                          IconButton(onPressed: (){/*we will meet soon 😁*/}, icon: Icon(Icons.share_rounded,color: Colors.white,))
                         ],
                       ),
                     ),
 
                     Row(
+                      //To many pieces or for one piece as you like it`s just a count  😒😒
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Row(
@@ -148,6 +150,7 @@ class _ProductInfoState extends State<ProductInfo> {
                     ),
 
                     Column(
+                      // that column to display all the related product of the same category.  
                       children: [
                         Text("Related App" , style: TextStyle(
                           fontSize: 30,
@@ -169,6 +172,7 @@ class _ProductInfoState extends State<ProductInfo> {
                                   for(var data in snapshot.data!.docs){
                                     final category = data.get(kProductCategory);
                                     final id = data.id;
+                                    //this if condition for display all products without the product appear.  
                                     if(products.pCategory == category && products.pId!=id)
                                     productList.add(Products(
                                       pId: data.id,
@@ -216,6 +220,8 @@ class _ProductInfoState extends State<ProductInfo> {
                               }
                             }
                             if(exist){
+                              //that condition is exist to don`t reapet the order again.
+                              //if user want some he will choose count of pieces and add to the cart again.
                               ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(content: Text("you \'ve added This Before"))
                               );
